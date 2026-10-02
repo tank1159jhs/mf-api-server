@@ -4,8 +4,15 @@ import base64
 
 app = Flask(__name__)
 
-# インメモリDB
-users = {}
+# インメモリDB (テスト用アカウントを初期登録)
+users = {
+    "TaroYamada": {
+        "user_id": "TaroYamada",
+        "password": "PaSSwd4TY",
+        "nickname": "たろー",
+        "comment": "僕は元気です"
+    }
+}
 
 def validate_user_id(user_id):
     if not user_id:
